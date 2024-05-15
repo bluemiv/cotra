@@ -37,43 +37,46 @@ const MarketPriceContainer = () => {
 
   return (
     <div className="flex flex-col gap-md">
-      <div className="flex items-center justify-end gap-md">
-        <Select
-          options={[
-            { label: '전체보기', value: 'all' },
-            { label: '북마크', value: 'bookmark' },
-          ]}
-          onChange={(e) => {
-            const isBookmark = e.target.value === 'bookmark';
-            const filteredDataSource = isBookmark
-              ? rawDataSource.current.filter((v) => bookmarkList.includes(v.id))
-              : rawDataSource.current;
-            setDataSource(filteredDataSource);
-          }}
-        />
-        <Select
-          options={[
-            { label: 'KRW 보기', value: 'krw' },
-            { label: 'USD 보기', value: 'usd' },
-          ]}
-          onChange={(e) => {
-            const currency = e.target.value as TCoinCurrency;
-            setSearchParams({ ...searchParams, vsCurrency: currency, page: 1 });
-            resetDataSource();
-          }}
-        />
-        <Select
-          options={[
-            { label: '10개 보기', value: 10 },
-            { label: '30개 보기', value: 30 },
-            { label: '50개 보기', value: 50 },
-          ]}
-          onChange={(e) => {
-            const perPage = Number(e.target.value);
-            setSearchParams({ ...searchParams, perPage, page: 1 });
-            resetDataSource();
-          }}
-        />
+      <div className="flex items-center justify-between">
+        <div>총 {dataSource.length}건</div>
+        <div className="flex items-center justify-end gap-md">
+          <Select
+            options={[
+              { label: '전체보기', value: 'all' },
+              { label: '북마크', value: 'bookmark' },
+            ]}
+            onChange={(e) => {
+              const isBookmark = e.target.value === 'bookmark';
+              const filteredDataSource = isBookmark
+                ? rawDataSource.current.filter((v) => bookmarkList.includes(v.id))
+                : rawDataSource.current;
+              setDataSource(filteredDataSource);
+            }}
+          />
+          <Select
+            options={[
+              { label: 'KRW 보기', value: 'krw' },
+              { label: 'USD 보기', value: 'usd' },
+            ]}
+            onChange={(e) => {
+              const currency = e.target.value as TCoinCurrency;
+              setSearchParams({ ...searchParams, vsCurrency: currency, page: 1 });
+              resetDataSource();
+            }}
+          />
+          <Select
+            options={[
+              { label: '10개 보기', value: 10 },
+              { label: '30개 보기', value: 30 },
+              { label: '50개 보기', value: 50 },
+            ]}
+            onChange={(e) => {
+              const perPage = Number(e.target.value);
+              setSearchParams({ ...searchParams, perPage, page: 1 });
+              resetDataSource();
+            }}
+          />
+        </div>
       </div>
       <CoinPriceTable currenyUnit={currenyUnit} dataSource={dataSource} />
       <button

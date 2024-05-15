@@ -80,7 +80,7 @@ const MarketPriceContainer = () => {
       </div>
       <CoinPriceTable currenyUnit={currenyUnit} dataSource={dataSource} />
       <button
-        className="w-full border p-md rounded shadow-sm hover:shadow hover:bg-zinc-50 flex items-center justify-center gap-sm"
+        className="w-full border dark:border-zinc-700 p-md rounded shadow-sm hover:shadow-md flex items-center justify-center gap-sm"
         onClick={() => setSearchParams({ ...searchParams, page: (searchParams?.page || 1) + 1 })}
       >
         <Icons.Plus />

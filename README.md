@@ -69,4 +69,4 @@ yarn build
 - [zod](https://zod.dev/)
   - form 입력에 대해 유효성 검사를 편하게 하기 위해 사용하였습니다.
 - @babel/plugin-proposal-private-property-in-object
-  - 일부 의존성 라이브러리에서 babel-preset-react-app이 추가되었으나, babel-preset-react-app에서 명시적으로 @babel/plugin-proposal-private-property-in-object를 추가되어 있지 않아 발생하는 경고 문구를 없애기 위해 devDependencies에 추가했습니다. 경고성 문구라서 앱을 실행할때 문제는 발생하지 않지만, 향후 위험 할 수 있으므로 추가했습니다.
+  - 일부 의존성 라이브러리에서 babel-preset-react-app이 추가되었으나, babel-preset-react-app에서 명시적으로 @babel/plugin-proposal-private-property-in-object를 추가되어 있지 않아 발생하는 경고 문구를 없애기 위해 추가했습니다. 경고성 문구라서 앱을 실행할때 문제는 발생하지 않지만, 향후 위험 할 수 있으므로 추가했습니다.

@@ -23,8 +23,8 @@ const Toast = () => {
   return (
     <div
       className={joinClassNames(
-        'fixed left-[calc(50%-150px)] bg-zinc-100 px-lg py-md max-w-[320px] leading-8 break-all line-clamp-4 overflow-y-hidden max-h-[150px] rounded-md z-10 shadow-md',
-        'transition-all duration-200 ease-in-out flex items-center gap-sm text-sm',
+        'fixed left-[calc(50%-150px)] px-lg py-md max-w-[320px] leading-8 break-all line-clamp-4 overflow-y-hidden max-h-[150px] rounded-md z-10 shadow-md',
+        'transition-all duration-200 ease-in-out flex items-center gap-sm text-sm bg-zinc-100 dark:bg-zinc-900',
         visible ? ' top-[80px]' : 'top-[-300px]',
       )}
     >

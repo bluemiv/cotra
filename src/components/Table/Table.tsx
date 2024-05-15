@@ -24,7 +24,7 @@ export default function Table({ rowKey = 'key', columns, dataSource }: TProps) {
   return (
     <div>
       <table className="w-full text-sm">
-        <thead className="bg-slate-50">
+        <thead className="bg-zinc-50 dark:bg-zinc-900 rounded">
           <tr>
             {columns?.map((col) => {
               return (

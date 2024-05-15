@@ -8,6 +8,8 @@ import BoxArrowLeftIcon from './BoxArrowLeftIcon';
 import GithubIcon from './GithubIcon';
 import TistoryIcon from './TistoryIcon';
 import InfoCircleIcon from './InfoCircleIcon';
+import SunFillIcon from './SunFillIcon';
+import MoonFillIcon from './MoonFillIcon';
 
 const Icons = {
   StarFill: StarFillIcon,
@@ -20,6 +22,8 @@ const Icons = {
   Github: GithubIcon,
   Tistory: TistoryIcon,
   InfoCircle: InfoCircleIcon,
+  SunFill: SunFillIcon,
+  MoonFill: MoonFillIcon,
 };
 
 export default Icons;

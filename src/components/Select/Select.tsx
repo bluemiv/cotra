@@ -24,7 +24,7 @@ const Select = ({ value, options, className, onChange }: TPropsWithClassName<TPr
       <select
         value={selected || ''}
         className={joinClassNames(
-          'appearance-none outline-none block pl-sm pr-[2rem] py-xs rounded-md hover:bg-zinc-100 active:bg-zinc-200 cursor-pointer transition duration-200 ease-in-out',
+          'appearance-none outline-none block pl-sm pr-[2rem] py-xs rounded-md bg-transparent hover:bg-zinc-100 active:bg-zinc-200 dark:hover:bg-zinc-700 dark:active:bg-zinc-900 cursor-pointer transition duration-200 ease-in-out',
           className,
         )}
         onChange={(e) => {

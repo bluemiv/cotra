@@ -1,5 +1,4 @@
 import React from 'react';
-import { NO_DATA } from '@/constants';
 import { TCoinDetailInfo } from '@/feature/coin/types';
 
 interface TProps {

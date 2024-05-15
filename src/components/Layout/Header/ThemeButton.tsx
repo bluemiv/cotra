@@ -17,7 +17,7 @@ const ThemeButton = () => {
 
   return (
     <button
-      className="h-[40px] px-sm py-xs rounded-md"
+      className="h-[40px] px-sm py-xs rounded-md outline-none"
       onClick={() => setTheme(theme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT)}
     >
       {theme === THEME.LIGHT ? (

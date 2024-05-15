@@ -20,6 +20,7 @@ const height = {
 
 const colors = {
   'black-base': '#343a40',
+  'd-black-base': '#f8f9fa',
   ...toTailwindColor('brand', [
     '#e6f7ff',
     '#bae7ff',
@@ -36,6 +37,7 @@ const colors = {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
     extend: {

@@ -7,7 +7,7 @@ import ThemeButton from '@/components/Layout/Header/ThemeButton';
 
 const Header = () => {
   return (
-    <header className="sticky top-0 h-header px-lg flex items-center gap-sm backdrop-blur-sm shadow z-10 bg-white/70 dark:bg-black-base/70">
+    <header className="sticky top-0 h-header px-lg flex items-center gap-sm backdrop-blur-sm shadow z-10 bg-white/70 dark:bg-zinc-800/70">
       <Link
         href={replaceRoutePath(ROUTE_PATH.MARKETS, { page: 'market' })}
         className="font-bold text-md sm:text-lg flex items-center gap-xs"

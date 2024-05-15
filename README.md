@@ -38,6 +38,28 @@ yarn install --production
 yarn build
 ```
 
+## 프로젝트 구조
+
+```bash
+├── api                   서버 API 스펙 정의
+├── components            재사용성이 높은 공통 component
+├── constants             공통으로 사용하는 상수 값
+├── feature               feature별로 구분
+     └── coin
+          ├── components  feature와 관련된 component
+          ├── types       feature와 관련된 type
+          └── constants   feature와 관련된 상수 값
+├── hooks                 전역에서 사용하는 hook
+     └── query            react-query hook
+├── index.css             global style
+├── index.tsx             initialize app
+├── pages                 page component
+├── store                 전역 상태 관리를 위한 zustand store
+├── templates             page의 template
+├── types                 공통으로 사용하는 type
+└── utils                 유틸성 라이브러리
+```
+
 ## 사용한 라이브러리 설명
 
 - prettier

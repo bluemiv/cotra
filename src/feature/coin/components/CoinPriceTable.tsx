@@ -52,6 +52,13 @@ const CoinPriceTable = ({ currenyUnit, dataSource }: TProps) => {
               className="flex items-center gap-xs font-semibold hover:text-brand-600 active:text-brand-700"
               href={replaceRoutePath(ROUTE_PATH.COIN_DETAIL, { id: record.id })}
             >
+              {!!record?.image && (
+                <img
+                  className="hidden sm:block w-[1.25rem] h-[1.25rem]"
+                  src={record.image}
+                  alt={name}
+                />
+              )}
               <span>{name}</span>
               <Icons.BoxArrowUpRight className="hidden sm:block" />
             </Link>

@@ -9,9 +9,10 @@ const Header = () => {
     <header className="sticky top-0 h-header px-lg flex items-center gap-sm bg-white/70 backdrop-blur-sm shadow z-10">
       <Link
         href={replaceRoutePath(ROUTE_PATH.MARKETS, { page: 'market' })}
-        className="font-bold text-md sm:text-lg"
+        className="font-bold text-md sm:text-lg flex items-center gap-xs"
       >
-        COTRA
+        <img className="w-[30px] h-[30px]" src="/r/i/logo.webp" alt="COTRA" />
+        <span>COTRA</span>
       </Link>
       <Nav />
     </header>

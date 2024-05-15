@@ -47,8 +47,8 @@ const CoinCalculator = ({ currency, detailData }: TProps) => {
   const currencyUnit = { krw: '₩', usd: '$' }[currency];
 
   return (
-    <div className="bg-slate-50 rounded-md p-lg">
-      <div className="text-zinc-500 text-sm mb-md">가격 계산</div>
+    <div className="bg-zinc-50 dark:bg-zinc-900 rounded-md p-lg">
+      <div className="text-zinc-500 dark:text-zinc-400 text-sm mb-md">가격 계산</div>
       <form className="flex flex-col sm:flex-row justify-center items-center gap-md">
         <div className="flex-1 flex items-center gap-sm justify-center sm:justify-end">
           <label>{detailData?.symbol?.toUpperCase()}</label>
@@ -63,7 +63,7 @@ const CoinCalculator = ({ currency, detailData }: TProps) => {
         <div className="flex-1 flex items-center gap-sm justify-center sm:justify-start">
           <label>{currency.toUpperCase()}</label>
           {!!errorMessage ? (
-            <span className="text-red-600 text-sm">{errorMessage}</span>
+            <span className="text-red-600 dark:text-red-400 text-sm">{errorMessage}</span>
           ) : (
             <span>{toMoneyFormat(calcPrice, { prefix: currencyUnit })}</span>
           )}

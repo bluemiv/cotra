@@ -13,7 +13,7 @@ const Link = ({ href, target, children, className }: TPropsWithBaseComponent<TPr
     <ReactRouterDomLink
       to={href}
       className={joinClassNames(
-        'block h-[40px] hover:text-black transition duration-200 ease-in-out',
+        'block h-[40px] hover:text-black dark:hover:text-white transition duration-200 ease-in-out',
         className,
       )}
       target={target}

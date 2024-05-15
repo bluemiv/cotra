@@ -18,7 +18,7 @@ const Input = forwardRef<HTMLInputElement, TPropsWithClassName<TProps>>(
         name={name}
         placeholder={placeholder}
         className={joinClassNames(
-          'py-xs px-sm outline-none rounded-md bg-zinc-50 border border-zinc-200 focus:border-brand-400',
+          'py-xs px-sm outline-none rounded-md bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 focus:border-brand-400',
           className,
         )}
         type={type}

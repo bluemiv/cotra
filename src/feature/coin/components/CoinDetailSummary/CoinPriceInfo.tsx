@@ -25,7 +25,13 @@ const CoinPriceInfo = ({ currency, marketData, className }: TPropsWithClassName<
               })
             : NO_DATA}
         </span>
-        <span className={percentageInCurreny > 0 ? 'text-red-600' : 'text-blue-600'}>
+        <span
+          className={
+            percentageInCurreny > 0
+              ? 'text-red-600 dark:text-red-400'
+              : 'text-blue-600 dark:text-blue-400'
+          }
+        >
           {percentageInCurreny || NO_DATA}%
         </span>
       </div>
@@ -37,7 +43,11 @@ const CoinPriceInfo = ({ currency, marketData, className }: TPropsWithClassName<
               })
             : NO_DATA}
         </span>
-        <span className={percentage > 0 ? 'text-red-600' : 'text-blue-600'}>
+        <span
+          className={
+            percentage > 0 ? 'text-red-600 dark:text-red-400' : 'text-blue-600 dark:text-blue-400'
+          }
+        >
           {percentage || NO_DATA}%
         </span>
       </div>

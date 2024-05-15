@@ -20,7 +20,7 @@ const CoinDetailTitle = ({ detailData }: TProps) => {
   return (
     <div className="flex gap-sm items-center">
       <button
-        className="items-center gap-xs bg-zinc-50 hover:bg-zinc-100 shadow-sm hidden sm:flex px-sm py-xs rounded"
+        className="items-center gap-xs bg-zinc-50 dark:bg-zinc-700 hover:shadow shadow-sm hidden sm:flex px-sm py-xs rounded"
         onClick={() => nav(-1)}
       >
         <Icons.BoxArrowLeft /> Back

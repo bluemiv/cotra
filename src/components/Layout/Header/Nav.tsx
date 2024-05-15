@@ -21,7 +21,7 @@ const Nav = () => {
           <li key={label}>
             <Link
               href={href}
-              className="hover:bg-zinc-100 active:bg-zinc-200 px-sm py-xs rounded-md"
+              className="hover:bg-zinc-100 active:bg-zinc-200 dark:hover:bg-zinc-700 dark:active:bg-zinc-900 dark:text-d-black-base px-sm py-xs rounded-md"
             >
               {label}
             </Link>

@@ -11,7 +11,7 @@ interface TProps {
 
 const Tabs = ({ activeTabKey, items, onChange }: TProps) => {
   return (
-    <div className="bg-zinc-100 flex rounded-md p-xs gap-xs">
+    <div className="bg-zinc-100 flex rounded-md p-xs gap-xs dark:bg-zinc-900">
       {items.map((item) => (
         <Tab
           key={item.tabKey}

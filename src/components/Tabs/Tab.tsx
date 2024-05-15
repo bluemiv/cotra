@@ -11,7 +11,9 @@ const Tab = ({ active = false, children, className, onClick }: TPropsWithBaseCom
   return (
     <button
       className={joinClassNames(
-        active ? 'bg-white shadow-sm font-semibold' : 'hover:shadow-sm hover:bg-white/40',
+        active
+          ? 'bg-white dark:bg-zinc-800 shadow-sm font-semibold'
+          : 'hover:shadow-sm hover:bg-white/40 dark:hover:bg-zinc-800/40',
         'flex-1 p-md transition ease-in-out duration-200 rounded-md',
         className,
       )}

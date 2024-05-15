@@ -1,13 +1,20 @@
 import React from 'react';
-import { Link } from '@/components';
+import { Icons, Link } from '@/components';
 
 const Footer = () => {
   return (
-    <footer className="text-sm flex flex-col items-center gap-md py-xl">
+    <footer className="max-h-footer text-sm flex flex-col items-center gap-md py-xl">
       <div className="text-zinc-500">© TaehongKim(bluemiv). 2024.</div>
       <div className="flex gap-sm text-zinc-500">
-        <Link href="https://bluemiv.tistory.com/">Blog</Link>
-        <Link href="https://github.com/bluemiv">Github</Link>
+        {[
+          { label: 'Blog', href: 'https://bluemiv.tistory.com/', icon: <Icons.Tistory /> },
+          { label: 'Github', href: 'https://github.com/bluemiv', icon: <Icons.Github /> },
+        ].map(({ label, href, icon }) => (
+          <Link key={label} href={href} className="flex items-center gap-xs">
+            {icon}
+            {label}
+          </Link>
+        ))}
       </div>
     </footer>
   );

@@ -5,6 +5,8 @@ import PlusIcon from './PlusIcon';
 import BoxArrowUpRightIcon from './BoxArrowUpRightIcon';
 import ExchangeIcon from './ExchangeIcon';
 import BoxArrowLeftIcon from './BoxArrowLeftIcon';
+import GithubIcon from './GithubIcon';
+import TistoryIcon from './TistoryIcon';
 
 const Icons = {
   StarFill: StarFillIcon,
@@ -14,6 +16,8 @@ const Icons = {
   BoxArrowUpRight: BoxArrowUpRightIcon,
   Exchange: ExchangeIcon,
   BoxArrowLeft: BoxArrowLeftIcon,
+  Github: GithubIcon,
+  Tistory: TistoryIcon,
 };
 
 export default Icons;

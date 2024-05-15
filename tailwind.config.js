@@ -14,8 +14,8 @@ const space = {
 
 const height = {
   header: '60px',
-  footer: '60px',
-  contents: 'calc(100vh - 120px)',
+  footer: '150px',
+  contents: 'calc(100vh - 210px)',
 };
 
 const colors = {

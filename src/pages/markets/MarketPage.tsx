@@ -3,17 +3,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { replaceRoutePath } from '@/utils/url';
 import { ROUTE_PATH } from '@/constants';
 import { Tabs } from '@/components';
-import { BookmarkContainer, MarketPriceContainer } from '@/feature/coin/components';
-
-enum TAB_KEY {
-  MARKET = 'market',
-  BOOKMARK = 'bookmark',
-}
+import { MARKETS_PAGE_KEY, BookmarkContainer, MarketPriceContainer } from '@/feature/coin';
 
 const MarketPage = () => {
   const nav = useNavigate();
   const pathParams = useParams();
-  const defaultTabKey = pathParams?.page || 'market';
+  const defaultTabKey = pathParams?.page || MARKETS_PAGE_KEY.MARKET;
 
   const [curTabKey, setCurTabKey] = useState<string | number>(defaultTabKey);
 
@@ -27,15 +22,15 @@ const MarketPage = () => {
         <Tabs
           activeTabKey={curTabKey}
           items={[
-            { label: '가상자산 시세 목록', tabKey: TAB_KEY.MARKET },
-            { label: '북마크 목록', tabKey: TAB_KEY.BOOKMARK },
+            { label: '가상자산 시세 목록', tabKey: MARKETS_PAGE_KEY.MARKET },
+            { label: '북마크 목록', tabKey: MARKETS_PAGE_KEY.BOOKMARK },
           ]}
           onChange={(tabKey) => {
             setCurTabKey(tabKey);
             nav(replaceRoutePath(ROUTE_PATH.MARKETS, { page: tabKey }));
           }}
         />
-        {curTabKey === TAB_KEY.MARKET ? <MarketPriceContainer /> : <BookmarkContainer />}
+        {curTabKey === MARKETS_PAGE_KEY.MARKET ? <MarketPriceContainer /> : <BookmarkContainer />}
       </div>
     </main>
   );

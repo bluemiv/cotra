@@ -54,6 +54,7 @@ const CoinPriceTable = ({ currenyUnit, dataSource }: TProps) => {
             >
               {!!record?.image && (
                 <img
+                  loading="lazy"
                   className="hidden sm:block w-[1.25rem] h-[1.25rem]"
                   src={record.image}
                   alt={name}

@@ -5,9 +5,11 @@ import { useMarketsQuery } from '@/hooks';
 import { TCoinCurrency, TMarketsQueryParams } from '@/feature/coin/types';
 import { useBookmarkCoinStore } from '@/store';
 import CoinPriceTable from '@/feature/coin/components/CoinPriceTable';
+import { useLocation } from 'react-router-dom';
 
 const MarketPriceContainer = () => {
   const { bookmarkList } = useBookmarkCoinStore();
+  const location = useLocation();
   const [searchParams, setSearchParams] = useState<TMarketsQueryParams>({
     vsCurrency: 'krw',
     priceChangePercentage: '1h,24h,7d',
@@ -24,6 +26,10 @@ const MarketPriceContainer = () => {
     rawDataSource.current = [];
     setDataSource([]);
   };
+
+  useEffect(() => {
+    resetDataSource();
+  }, [location]);
 
   useEffect(() => {
     if (!lodash.isArray(data)) return;

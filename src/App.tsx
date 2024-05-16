@@ -17,6 +17,7 @@ const App = () => {
             return Promise.resolve(error);
           }
 
+          showToast(`시스템 오류가 발생했습니다. ${error.message}`);
           return Promise.reject(error);
         },
       },
